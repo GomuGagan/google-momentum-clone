@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import {QuoteContainer, Text} from "./QuoteStyle"
 
 const url ="https://goquotes-api.herokuapp.com/api/v1/random?count=1"
 
@@ -19,10 +20,10 @@ const Quote = () => {
     if (!quote) return null;
     
   return (
-    <div>
-        <p>{quote.quotes[0].text}</p>
-        <p>-{quote.quotes[0].author}</p>
-        </div>
+    <QuoteContainer>
+        <Text>{quote.quotes[0].text}</Text>
+        <Text>-{quote.quotes[0].author}</Text>
+        </QuoteContainer>
   )
 };
 

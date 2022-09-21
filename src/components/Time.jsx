@@ -1,6 +1,7 @@
 import React from 'react'
 import Moment from 'react-moment';
 import 'moment-timezone';
+import {Welcome, TimeStamp, Greeting} from "./TimeStyles"
 
 const Time = () => {
 
@@ -17,11 +18,13 @@ const Time = () => {
         }
     }
   return (
-    <div>
-        <Moment format='LT' />
-        <p>{greeting()}</p>
+    <Welcome>
+       <TimeStamp>
+         <Moment format='LT' />
+        </TimeStamp>
+        <Greeting>{greeting()}</Greeting>
         
-        </div>
+        </Welcome>
   )
 }
 
